@@ -708,7 +708,7 @@ main {
   place-items: center;
   border-radius: var(--radius-12);
   box-shadow: var(--shadow-1);
-  cursor: help;
+  cursor: pointer;
 }
 
 .skill-card:hover .tooltip {
@@ -740,7 +740,7 @@ main {
 }
 
 .timeline-list {
-  font-size: var(--fs-6);
+  /* font-size: var(--fs-6); */
   margin-left: 45px;
 }
 

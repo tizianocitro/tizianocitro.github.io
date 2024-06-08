@@ -75,7 +75,7 @@ body.dark_theme {
   --bg-primary: hsl(0, 0%, 12%);
   --bg-secondary: hsl(0, 0%, 19%);
   --color-primary: hsl(0, 0%, 100%);
-  --color-secondary: hsl(0, 0%, 62%);
+  --color-secondary: hsl(0, 0%, 82%);
   --card-shadow: hsla(0, 0%, 0%, 0.4);
   --input-bg: hsl(0, 0%, 16%);
 
@@ -88,7 +88,7 @@ body.light_theme {
   --bg-primary: hsl(0, 0%, 90%);
   --bg-secondary: hsl(0, 0%, 100%);
   --color-primary: hsl(0, 0%, 12%);
-  --color-secondary: hsl(0, 0%, 37%);
+  --color-secondary: hsl(0, 0%, 27%);
   --card-shadow: hsla(0, 0%, 0%, 0.1);
   --input-bg: hsl(0, 0%, 93%);
 

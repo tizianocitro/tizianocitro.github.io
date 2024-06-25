@@ -282,6 +282,11 @@ body.active {
   margin-bottom: 30px;
 }
 
+.secondary-text {
+  line-height: 1.8;
+  display: inline;
+}
+
 .tooltip {
   position: absolute;
   top: -40px;

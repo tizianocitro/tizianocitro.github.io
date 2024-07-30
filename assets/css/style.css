@@ -1219,12 +1219,6 @@ textarea.input-field {
 
 }
 
-@media (min-width: 2320px) {
-  .section-title {
-    max-width: 350px;
-  }
-}
-
 /**
  * responsive for larger than 992px screen
  */
@@ -1575,5 +1569,10 @@ textarea.input-field {
   .timeline-text {
     max-width: 700px;
   }
+}
 
+@media (min-width: 1750px) {
+  .section-title {
+    max-width: 460px;
+  }
 }

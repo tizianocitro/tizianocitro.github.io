@@ -276,6 +276,10 @@ body.active {
   margin-bottom: 30px;
 }
 
+.no-max-width-section-title {
+  margin-bottom: 30px;
+}
+
 .section-text {
   color: var(--color-secondary);
   line-height: 1.8;
@@ -1116,8 +1120,6 @@ textarea.input-field {
     max-width: 380px;
   }
 
-
-
   /**
    * PROJECT
    */
@@ -1254,6 +1256,10 @@ textarea.input-field {
   .section-content {
     position: relative;
     padding-left: 40px;
+  }
+
+  .section-title {
+    max-width: 350px;
   }
 
   .section-subtitle {
@@ -1484,7 +1490,8 @@ textarea.input-field {
 
   .contact {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    /* this was removed to make the contact title take more space */
+    /* grid-template-columns: 1fr 1fr; */
     gap: 30px;
   }
 
@@ -1531,9 +1538,9 @@ textarea.input-field {
     max-width: 1150px;
   }
 
-  .section-title {
+  /* .section-title {
     max-width: 460px;
-  }
+  } */
 
   /**
    * HERO

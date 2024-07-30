@@ -1219,6 +1219,12 @@ textarea.input-field {
 
 }
 
+@media (min-width: 2320px) {
+  .section-title {
+    max-width: 350px;
+  }
+}
+
 /**
  * responsive for larger than 992px screen
  */

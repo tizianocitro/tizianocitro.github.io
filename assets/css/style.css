@@ -56,6 +56,7 @@
    */
 
   --section-padding: 80px;
+  --section-padding-sm: 50px;
 
   /**
    * radius
@@ -543,7 +544,7 @@ main {
 \*-----------------------------------*/
 
 .stats {
-  padding-block: var(--section-padding);
+  padding-block: var(--section-padding-sm);
   padding-top: 0px;
 }
 
@@ -729,6 +730,10 @@ main {
   #RESUME
 \*-----------------------------------*/
 
+.resume {
+  padding-block: var(--section-padding-sm);
+}
+
 .article-title {
   margin-bottom: 30px;
 }
@@ -910,7 +915,8 @@ main {
 \*-----------------------------------*/
 
 .contact {
-  padding-block: var(--section-padding);
+  padding-block-start: var(--section-padding);
+  padding-block-end: 20px;
 }
 
 .contact-content {

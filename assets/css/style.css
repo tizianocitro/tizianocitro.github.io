@@ -1582,3 +1582,61 @@ textarea.input-field {
     max-width: 460px;
   }
 }
+
+/*-----------------------------------*/
+/* COLLAPSIBLE */
+
+.collapsible-content {
+  overflow: hidden;
+  transition: max-height 0.3s ease;
+}
+
+.collapsible-header {
+  cursor: pointer;
+}
+
+.collapsible-header:hover {
+  color: var(--raw-seinna);
+}
+
+.collapsible-header:hover span {
+  color: var(--color-primary);
+}
+
+.collapsible-header .tooltip {
+  position: absolute;
+  top: -20px;
+  left: 50%;
+  transform: translateY(-50%) translateX(10px);
+  background: var(--raw-seinna);
+  color: var(--white);
+  font-size: 14px;
+  font-weight: var(--fw-700);
+  padding: 5px 10px;
+  border-radius: var(--radius-4);
+  box-shadow: var(--shadow-1);
+  opacity: 0;
+  pointer-events: none;
+  transition: var(--transition-1);
+  z-index: 1;
+}
+
+.collapsible-header:hover .tooltip {
+  opacity: 1;
+  transform: translateX(-50%) translateY(-10px);
+}
+
+.collapsible-header .arrow {
+  font-size: 14px;
+  display: inline-block;
+  margin-left: 8px;
+  margin-bottom: 5px;
+  color: var(--color-secondary);
+
+  transition: transform 0.3s ease;
+  transform: rotate(270deg);
+}
+
+.collapsible-header .arrow.expanded {
+  transform: rotate(360deg) translate(0, 1px);
+}

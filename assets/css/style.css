@@ -1595,13 +1595,16 @@ textarea.input-field {
   cursor: pointer;
 }
 
-.collapsible-header:hover {
-  color: var(--raw-seinna);
-}
+/* @media (min-width: 992) {
 
-.collapsible-header:hover span {
-  color: var(--color-primary);
-}
+  .collapsible-header:hover {
+    color: var(--raw-seinna);
+  }
+
+  .collapsible-header:hover span {
+    color: var(--color-primary);
+  }
+} */
 
 .collapsible-header .tooltip {
   position: absolute;

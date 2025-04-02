@@ -1,10 +1,13 @@
 'use strict';
 
-/**
- * element toggle function
- */
-const elemToggleFunc = function (elem) {
+ const toggleElement = function (elem) {
   elem.classList.toggle("active");
+}
+
+const toggleNavbar = function (navToggleBtn, navbar) {
+  toggleElement(navToggleBtn);
+  toggleElement(navbar);
+  toggleElement(document.body);
 }
 
 /**
@@ -14,7 +17,6 @@ const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
 
 window.addEventListener("scroll", function () {
-
   if (window.scrollY >= 10) {
     header.classList.add("active");
     goTopBtn.classList.add("active");
@@ -22,7 +24,6 @@ window.addEventListener("scroll", function () {
     header.classList.remove("active");
     goTopBtn.classList.remove("active");
   }
-
 });
 
 /**
@@ -32,11 +33,15 @@ const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
 
 navToggleBtn.addEventListener("click", function () {
+  toggleNavbar(navToggleBtn, navbar);
+});
 
-  elemToggleFunc(navToggleBtn);
-  elemToggleFunc(navbar);
-  elemToggleFunc(document.body);
-
+// Close the navbar when a link is clicked in mobile view
+const navLinks = document.querySelectorAll('.navbar-link');
+navLinks.forEach(link => {
+  link.addEventListener('click', () => {
+    toggleNavbar(navToggleBtn, navbar);
+  });
 });
 
 /**
@@ -48,13 +53,11 @@ const skillsBox = document.querySelector("[data-skills-box]");
 
 for (let i = 0; i < toggleBtns.length; i++) {
   toggleBtns[i].addEventListener("click", function () {
-
-    elemToggleFunc(toggleBtnBox);
+    toggleElement(toggleBtnBox);
     for (let i = 0; i < toggleBtns.length; i++) {
-      elemToggleFunc(toggleBtns[i]);
+      toggleElement(toggleBtns[i]);
     }
-    elemToggleFunc(skillsBox);
-
+    toggleElement(skillsBox);
   });
 }
 
@@ -64,8 +67,7 @@ for (let i = 0; i < toggleBtns.length; i++) {
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
 themeToggleBtn.addEventListener("click", function () {
-
-  elemToggleFunc(themeToggleBtn);
+  toggleElement(themeToggleBtn);
 
   if (themeToggleBtn.classList.contains("active")) {
     document.body.classList.remove("dark_theme");
@@ -78,7 +80,6 @@ themeToggleBtn.addEventListener("click", function () {
 
     localStorage.setItem("theme", "dark_theme");
   }
-
 });
 
 /**

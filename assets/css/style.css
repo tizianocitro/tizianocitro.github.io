@@ -5,7 +5,7 @@
 :root {
 
   /**
-   * colors
+   * Colors
    */
 
   --raw-seinna: hsl(24, 74%, 58%);
@@ -19,7 +19,7 @@
   --white: hsl(0, 0%, 100%);
 
   /**
-   * typography
+   * Typography
    */
 
   --ff-saira-stencil-one: "Saira Stencil One", sans-serif;
@@ -39,20 +39,20 @@
   --fw-700: 700;
 
   /**
-   * transition
+   * Transition
    */
 
   --transition-1: 0.25s ease-in-out;
 
   /**
-   * spacing
+   * Spacing
    */
 
   --section-padding: 80px;
   --section-padding-sm: 50px;
 
   /**
-   * radius
+   * Radius
    */
 
   --radius-4: 4px;
@@ -732,7 +732,7 @@ main {
 }
 
 /**
- * education and experience 
+ * Education and experience 
  */
 
 .timeline {
@@ -1101,7 +1101,7 @@ textarea.input-field {
 \*-----------------------------------*/
 
 /**
- * responsive for larger than 550px screen
+ * Responsive for larger than 550px screen
  */
 
 @media (min-width: 550px) {
@@ -1163,7 +1163,7 @@ textarea.input-field {
 }
 
 /**
- * responsive for larger than 768px screen
+ * Responsive for larger than 768px screen
  */
 
 @media (min-width: 768px) {
@@ -1219,7 +1219,7 @@ textarea.input-field {
 }
 
 /**
- * responsive for larger than 992px screen
+ * Responsive for larger than 992px screen
  */
 
 @media (min-width: 992px) {
@@ -1231,13 +1231,13 @@ textarea.input-field {
   :root {
 
     /**
-     * typography
+     * Typography
      */
 
     --fs-2: 3rem;
 
     /**
-     * spacing
+     * Spacing
      */
 
     --section-padding: 100px;
@@ -1524,7 +1524,7 @@ textarea.input-field {
 }
 
 /**
- * responsive for larger than 1200px screen
+ * Responsive for larger than 1200px screen
  */
 
 @media (min-width: 1200px) {

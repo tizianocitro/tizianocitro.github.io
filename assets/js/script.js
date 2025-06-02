@@ -1,6 +1,6 @@
 'use strict';
 
- const toggleElement = function (elem) {
+const toggleElement = function (elem) {
   elem.classList.toggle("active");
 }
 
@@ -11,7 +11,7 @@ const toggleNavbar = function (navToggleBtn, navbar) {
 }
 
 /**
- * header sticky & go to top
+ * Header sticky and go to top
  */
 const header = document.querySelector("[data-header]");
 const goTopBtn = document.querySelector("[data-go-top]");
@@ -27,7 +27,7 @@ window.addEventListener("scroll", function () {
 });
 
 /**
- * navbar toggle
+ * Navbar toggle
  */
 const navToggleBtn = document.querySelector("[data-nav-toggle-btn]");
 const navbar = document.querySelector("[data-navbar]");
@@ -45,7 +45,7 @@ navLinks.forEach(link => {
 });
 
 /**
- * skills toggle
+ * Skills toggle
  */
 const toggleBtnBox = document.querySelector("[data-toggle-box]");
 const toggleBtns = document.querySelectorAll("[data-toggle-btn]");
@@ -62,7 +62,7 @@ for (let i = 0; i < toggleBtns.length; i++) {
 }
 
 /**
- * dark & light theme toggle
+ * Dark/light theme toggle
  */
 const themeToggleBtn = document.querySelector("[data-theme-btn]");
 
@@ -83,7 +83,7 @@ themeToggleBtn.addEventListener("click", function () {
 });
 
 /**
- * check & apply last time selected theme from localStorage
+ * Check and apply last time selected theme from localStorage
  */
 if (localStorage.getItem("theme") === "light_theme") {
   themeToggleBtn.classList.add("active");
@@ -96,7 +96,7 @@ if (localStorage.getItem("theme") === "light_theme") {
 }
 
 /**
- * make education & experience headers collapsible
+ * Make education and experience headers collapsible
  */
 document.querySelectorAll('.collapsible-header').forEach(header => {
   header.addEventListener('click', () => {

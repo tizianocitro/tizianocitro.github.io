@@ -1602,18 +1602,37 @@ textarea.input-field {
   position: relative;
 }
 
-.collapsible-header:hover {
-  background: rgba(var(--raw-seinna-rgb, 189, 85, 50), 0.1);
-  transform: translateX(5px);
+/*
+ * Only apply hover effects on devices that support true hovering (non-touch devices)
+ */
+@media (hover: hover) and (pointer: fine) {
+  .collapsible-header:hover {
+    background: rgba(var(--raw-seinna-rgb, 189, 85, 50), 0.1);
+    transform: translateX(5px);
+  }
+
+  .collapsible-header:hover .arrow {
+    /* color: var(--raw-seinna); */
+    transform: scale(1.1) rotate(270deg);
+  }
+
+  .collapsible-header:hover .arrow.expanded {
+    transform: scale(1.1) rotate(360deg) translate(0, 1px);
+  }
+
+  .collapsible-header:hover::before {
+    opacity: 1;
+  }
 }
 
-.collapsible-header:hover .arrow {
-  /* color: var(--raw-seinna); */
-  transform: scale(1.1) rotate(270deg);
-}
-
-.collapsible-header:hover .arrow.expanded {
-  transform: scale(1.1) rotate(360deg) translate(0, 1px);
+/*
+ * For touch devices, add a subtle active state instead of hover
+ */
+@media (hover: none) and (pointer: coarse) {
+  .collapsible-header:active {
+    background: rgba(var(--raw-seinna-rgb, 189, 85, 50), 0.05);
+    transform: scale(0.98);
+  }
 }
 
 .collapsible-header .tooltip {
@@ -1655,7 +1674,7 @@ textarea.input-field {
 }
 
 /*
-* Pulse effect on hover for better visual feedback
+* Pulse effect on hover for better visual feedback (only on non-touch devices)
 */
 .collapsible-header::before {
   content: '';
@@ -1668,8 +1687,4 @@ textarea.input-field {
   border-radius: 2px;
   opacity: 0;
   transition: opacity 0.2s ease;
-}
-
-.collapsible-header:hover::before {
-  opacity: 1;
 }

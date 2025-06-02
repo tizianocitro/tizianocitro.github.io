@@ -1,13 +1,5 @@
 /*-----------------------------------*\
- * style.css
-\*-----------------------------------*/
-
-/**
- * copyright 2022 codewithsadee
- */
-
-/*-----------------------------------*\
- * #CUSTOM PROPERTY
+ * CUSTOM PROPERTIES
 \*-----------------------------------*/
 
 :root {
@@ -17,6 +9,7 @@
    */
 
   --raw-seinna: hsl(24, 74%, 58%);
+  --raw-seinna-rgb: 189, 85, 50;
   --sizzling-sunrise: hsl(51, 95%, 54%);
   --scarlet: hsl(13, 96%, 47%);
   --light-gray: hsl(0, 0%, 84%);
@@ -68,7 +61,7 @@
 }
 
 /*-----------------------------------*\
- * #THEME COLORS
+ * THEME COLORS
 \*-----------------------------------*/
 
 body.dark_theme {
@@ -98,7 +91,7 @@ body.light_theme {
 }
 
 /*-----------------------------------*\
- * #RESET
+ * RESET
 \*-----------------------------------*/
 
 *,
@@ -178,7 +171,7 @@ body.active {
 }
 
 /*-----------------------------------*\
- * #REUSED STYLE
+ * REUSED STYLE
 \*-----------------------------------*/
 
 .container {
@@ -1588,23 +1581,40 @@ textarea.input-field {
 
 .collapsible-content {
   overflow: hidden;
-  transition: max-height 0.3s ease;
+  transition: all 0.4s cubic-bezier(0.4, 0, 0.2, 1);
+  opacity: 1;
+  transform: translateY(0);
+  margin-bottom: 15px;
+}
+
+.collapsible-content[style*="display: none"] {
+  opacity: 0;
+  transform: translateY(-10px);
+  margin-bottom: 0;
 }
 
 .collapsible-header {
   cursor: pointer;
+  transition: all 0.2s ease;
+  padding: 8px 12px;
+  border-radius: var(--radius-4);
+  margin: -8px -12px 5px -12px;
+  position: relative;
 }
 
-/* @media (min-width: 992) {
+.collapsible-header:hover {
+  background: rgba(var(--raw-seinna-rgb, 189, 85, 50), 0.1);
+  transform: translateX(5px);
+}
 
-  .collapsible-header:hover {
-    color: var(--raw-seinna);
-  }
+.collapsible-header:hover .arrow {
+  /* color: var(--raw-seinna); */
+  transform: scale(1.1) rotate(270deg);
+}
 
-  .collapsible-header:hover span {
-    color: var(--color-primary);
-  }
-} */
+.collapsible-header:hover .arrow.expanded {
+  transform: scale(1.1) rotate(360deg) translate(0, 1px);
+}
 
 .collapsible-header .tooltip {
   position: absolute;
@@ -1635,11 +1645,31 @@ textarea.input-field {
   margin-left: 8px;
   margin-bottom: 5px;
   color: var(--color-secondary);
-
-  transition: transform 0.3s ease;
+  transition: all 0.3s cubic-bezier(0.4, 0, 0.2, 1);
   transform: rotate(270deg);
 }
 
 .collapsible-header .arrow.expanded {
   transform: rotate(360deg) translate(0, 1px);
+  color: var(--raw-seinna);
+}
+
+/*
+* Pulse effect on hover for better visual feedback
+*/
+.collapsible-header::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: -5px;
+  width: 3px;
+  height: 100%;
+  background: var(--raw-seinna);
+  border-radius: 2px;
+  opacity: 0;
+  transition: opacity 0.2s ease;
+}
+
+.collapsible-header:hover::before {
+  opacity: 1;
 }

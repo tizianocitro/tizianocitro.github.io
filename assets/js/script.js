@@ -40,7 +40,13 @@ navToggleBtn.addEventListener("click", function () {
 const navLinks = document.querySelectorAll('.navbar-link');
 navLinks.forEach(link => {
   link.addEventListener('click', () => {
-    toggleNavbar(navToggleBtn, navbar);
+    // Only close the navbar if it is currently open
+    // When the body has the active class, we apply 'overflow: hidden' which blocks scrolling
+    // The if ensures that we only call toggleNavbar() to close the navbar if it is
+    // currently open (i.e., has the active class)
+    if (navbar.classList.contains('active')) {
+      toggleNavbar(navToggleBtn, navbar);
+    }
   });
 });
 

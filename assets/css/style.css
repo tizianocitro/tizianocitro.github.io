@@ -1688,3 +1688,23 @@ textarea.input-field {
   opacity: 0;
   transition: opacity 0.2s ease;
 }
+
+.section-text.collapsible-content ul {
+  list-style: none;
+  padding-left: 20px;
+  margin-top: 1em;
+  margin-bottom: 1em;
+}
+
+.section-text.collapsible-content ul li {
+  position: relative;
+  padding-left: 25px;
+  margin-bottom: 10px;
+}
+
+.section-text.collapsible-content ul li::before {
+  content: '—';
+  position: absolute;
+  left: 0;
+  top: 0;
+}

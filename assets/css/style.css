@@ -1691,9 +1691,8 @@ textarea.input-field {
 
 .section-text.collapsible-content ul {
   list-style: none;
-  padding-left: 20px;
-  margin-top: 1em;
-  margin-bottom: 1em;
+  padding-left: 15px;
+  margin-top: 0.5em;
 }
 
 .section-text.collapsible-content ul li {

@@ -1,6 +1,6 @@
-# Essential Stuff
+# Important References for CSS Style
 
-## Html import links
+## HTML import links
 
 Google font
 

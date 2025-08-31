@@ -1067,6 +1067,10 @@ textarea.input-field {
   color: var(--raw-seinna);
 }
 
+.copyright span {
+  display: inline-block;
+}
+
 /*-----------------------------------*\
  * #GO TO TOP
 \*-----------------------------------*/

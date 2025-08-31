@@ -135,3 +135,14 @@ document.querySelectorAll('.collapsible-header').forEach(header => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', (_) => {
+    const yearSpan = document.getElementById('copyright-year');
+    const startYear = 2024;
+    const currentYear = new Date().getFullYear();
+    if (startYear === currentYear) {
+        yearSpan.textContent = startYear;
+    } else {
+        yearSpan.textContent = `${startYear} - ${currentYear}`;
+    }
+});
